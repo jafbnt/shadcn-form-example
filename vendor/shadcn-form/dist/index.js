@@ -54,6 +54,7 @@ function useFormConfig() {
 
 // src/form/FormItem.tsx
 import { Fragment, jsx as jsx2, jsxs as jsxs2 } from "react/jsx-runtime";
+var FieldCompat = Field.default ?? Field;
 function defaultGetValueFromEvent(valuePropName, args) {
   const event = args[0];
   if (valuePropName === "checked") {
@@ -134,7 +135,7 @@ function FormItem({
   const fieldRules = useMemo(() => rules, [rules]);
   const cfg = useFormConfig();
   return /* @__PURE__ */ jsx2(
-    Field,
+    FieldCompat,
     {
       name,
       initialValue,
@@ -263,8 +264,9 @@ function FormItem({
 // src/form/FormList.tsx
 import List from "rc-field-form/lib/List";
 import { jsx as jsx3 } from "react/jsx-runtime";
+var ListCompat = List.default ?? List;
 function FormList(props) {
-  return /* @__PURE__ */ jsx3(List, { ...props, children: props.children });
+  return /* @__PURE__ */ jsx3(ListCompat, { ...props, children: props.children });
 }
 
 // src/form/FormProvider.tsx

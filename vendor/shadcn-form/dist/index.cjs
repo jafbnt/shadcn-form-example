@@ -117,6 +117,7 @@ function useFormConfig() {
 
 // src/form/FormItem.tsx
 var import_jsx_runtime2 = require("react/jsx-runtime");
+var FieldCompat = import_Field.default.default ?? import_Field.default;
 function defaultGetValueFromEvent(valuePropName, args) {
   const event = args[0];
   if (valuePropName === "checked") {
@@ -197,7 +198,7 @@ function FormItem({
   const fieldRules = (0, import_react3.useMemo)(() => rules, [rules]);
   const cfg = useFormConfig();
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
-    import_Field.default,
+    FieldCompat,
     {
       name,
       initialValue,
@@ -326,8 +327,9 @@ function FormItem({
 // src/form/FormList.tsx
 var import_List = __toESM(require("rc-field-form/lib/List"), 1);
 var import_jsx_runtime3 = require("react/jsx-runtime");
+var ListCompat = import_List.default.default ?? import_List.default;
 function FormList(props) {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_List.default, { ...props, children: props.children });
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(ListCompat, { ...props, children: props.children });
 }
 
 // src/form/FormProvider.tsx

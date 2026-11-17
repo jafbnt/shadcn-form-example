@@ -129,7 +129,7 @@ function App() {
           <div>
             <h1 className="text-xl font-bold">shadcn-form</h1>
             <p className="text-xs text-muted-foreground">
-              High-performance form component with data domain management.
+              High-performance form component with data domain management and practical examples.
             </p>
           </div>
           <a

@@ -345,6 +345,7 @@ function useItemStatus() {
 
 // src/form/Form.tsx
 var import_jsx_runtime5 = require("react/jsx-runtime");
+var RcFormCompat = import_rc_field_form2.default.default ?? import_rc_field_form2.default;
 function namePathToDomId(formName, path) {
   return [formName, ...path].filter(Boolean).join("_");
 }
@@ -405,7 +406,7 @@ var BaseForm = (0, import_react5.forwardRef)((props, ref) => {
   };
   const isRenderChildren = typeof children === "function";
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(FormConfigContext.Provider, { value: cfg, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(FormInstanceContext.Provider, { value: mergedForm, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
-    import_rc_field_form2.default,
+    RcFormCompat,
     {
       ...rest,
       ref,

@@ -282,6 +282,7 @@ function useItemStatus() {
 
 // src/form/Form.tsx
 import { Fragment as Fragment2, jsx as jsx5 } from "react/jsx-runtime";
+var RcFormCompat = RcForm.default ?? RcForm;
 function namePathToDomId(formName, path) {
   return [formName, ...path].filter(Boolean).join("_");
 }
@@ -342,7 +343,7 @@ var BaseForm = forwardRef((props, ref) => {
   };
   const isRenderChildren = typeof children === "function";
   return /* @__PURE__ */ jsx5(FormConfigContext.Provider, { value: cfg, children: /* @__PURE__ */ jsx5(FormInstanceContext.Provider, { value: mergedForm, children: /* @__PURE__ */ jsx5(
-    RcForm,
+    RcFormCompat,
     {
       ...rest,
       ref,
